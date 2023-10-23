@@ -31,7 +31,7 @@ class RatingWidget extends StatelessWidget {
           opacity: .4,
           child: Text(
             '(23390)',
-            style: Styles.textStyle14.copyWith(color:  Colors.white),
+            style: Styles.textStyle14.copyWith(color: Colors.white),
           ),
         ),
       ],

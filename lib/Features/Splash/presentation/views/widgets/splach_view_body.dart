@@ -50,7 +50,6 @@ class _SpalchViewBodyState extends State<SpalchViewBody>
   void navigateToHome() {
     Future.delayed(const Duration(milliseconds: 1600), () {
       Navigator.pushNamed(context, HomeView.id);
-     
 
       /*   Get.to(
         () => const HomeView(),

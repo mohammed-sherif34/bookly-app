@@ -7,7 +7,7 @@ class SplachView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-     // backgroundColor: Colors.black,
-      body: SpalchViewBody());
+        // backgroundColor: Colors.black,
+        body: SpalchViewBody());
   }
 }

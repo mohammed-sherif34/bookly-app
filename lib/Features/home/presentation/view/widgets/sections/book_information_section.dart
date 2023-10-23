@@ -9,7 +9,7 @@ class BookInformationSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-  crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(
           height: MediaQuery.of(context).size.height * .35,
@@ -32,7 +32,7 @@ class BookInformationSection extends StatelessWidget {
             style: Styles.textStyle18,
           ),
         ),
-         const SizedBox(
+        const SizedBox(
           height: 20,
         ),
         const RatingWidget()
@@ -40,4 +40,3 @@ class BookInformationSection extends StatelessWidget {
     );
   }
 }
-
