@@ -1,4 +1,4 @@
-import 'package:bookly_app/Features/home/presentation/view/widgets/list_view%20&%20items/featured_book_list_view_item.dart';
+import 'package:bookly_app/Features/home/presentation/view/widgets/list_view%20&%20items/book_poster.dart';
 import 'package:bookly_app/Features/home/presentation/view/widgets/rating_widget.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +13,7 @@ class BookInformationSection extends StatelessWidget {
       children: [
         SizedBox(
           height: MediaQuery.of(context).size.height * .35,
-          child: const FeaturedBookListViewItem(),
+          child: const BookPoster(),
         ),
         const SizedBox(
           height: 32,

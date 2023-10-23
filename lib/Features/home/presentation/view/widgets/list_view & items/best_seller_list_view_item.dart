@@ -1,5 +1,5 @@
 import 'package:bookly_app/Features/home/presentation/view/book_detailed_view.dart';
-import 'package:bookly_app/Features/home/presentation/view/widgets/list_view%20&%20items/featured_book_list_view_item.dart';
+import 'package:bookly_app/Features/home/presentation/view/widgets/list_view%20&%20items/book_poster.dart';
 import 'package:bookly_app/Features/home/presentation/view/widgets/rating_widget.dart';
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
@@ -20,7 +20,7 @@ class BestsillerListViewItem extends StatelessWidget {
         height: MediaQuery.of(context).size.height * .16,
         child: Row(
           children: [
-            const FeaturedBookListViewItem(),
+            const BookPoster(),
             const SizedBox(
               width: 30,
             ),

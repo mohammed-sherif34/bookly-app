@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FeaturedBookListViewItem extends StatelessWidget {
-  const FeaturedBookListViewItem({super.key});
+class BookPoster extends StatelessWidget {
+  const BookPoster({super.key});
 
   @override
   Widget build(BuildContext context) {
