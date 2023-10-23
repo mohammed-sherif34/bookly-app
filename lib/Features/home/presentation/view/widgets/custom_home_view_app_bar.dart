@@ -1,9 +1,7 @@
-// ignore_for_file: file_names
-
-import 'package:bookly_app/Features/search/presentation/view/search_view.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:bookly_app/Features/search/presentation/view/search_view.dart';
 
 class CustomHomeViewAppBar extends StatelessWidget {
   const CustomHomeViewAppBar({
