@@ -1,11 +1,10 @@
 import 'package:dio/dio.dart';
 
 class Api {
-  static const String url =
-      'https://www.googleapis.com/books/v1/volumes?Filtering=free-ebooks&q=subject:programming';
-   Future<Map<String, dynamic>> get() async {
-    final response = await Dio().get(url);
-   // print(response.data);
+  static const String paseurl = 'https://www.googleapis.com/books/v1';
+  Future<Map<String, dynamic>> get({required String endPoint}) async {
+    final response = await Dio().get('$paseurl$endPoint');
+    // print(response.data);
     return response.data;
   }
 }
