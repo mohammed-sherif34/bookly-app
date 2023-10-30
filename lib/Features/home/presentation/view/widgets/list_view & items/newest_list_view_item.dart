@@ -1,26 +1,36 @@
+import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/Features/home/presentation/view/book_detailed_view.dart';
 import 'package:bookly_app/Features/home/presentation/view/widgets/list_view%20&%20items/book_poster.dart';
-import 'package:bookly_app/Features/home/presentation/view/widgets/rating_widget.dart';
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-class BestsillerListViewItem extends StatelessWidget {
-  const BestsillerListViewItem({super.key});
+class NewestListViewItem extends StatelessWidget {
+  const NewestListViewItem({super.key, required this.book});
+  final BookModel book;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, BookDetailedView.id);
+        // Navigator.pushNamed(context, BookDetailedView.id,arguments: book);
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return BookDetailedView(
+            book: book,
+          );
+        }));
       },
+
       // ignore: sized_box_for_whitespace
       child: Container(
         color: kPrimeColor,
         height: MediaQuery.of(context).size.height * .16,
         child: Row(
           children: [
-            const BookPoster(),
+            BookPoster(
+              book: book
+                
+            ),
             const SizedBox(
               width: 30,
             ),
@@ -30,17 +40,17 @@ class BestsillerListViewItem extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: MediaQuery.of(context).size.width * .5,
-                    child: const Text(
+                    child: Text(
                       maxLines: 2,
-                      'Harry Potter and the Globel of Fire',
+                      book.volumeInfo!.title ?? 'Computer science Book',
                       style: Styles.textStyle18,
                     ),
                   ),
                   const SizedBox(
                     height: 8,
                   ),
-                  const Text(
-                    'J.K. Rowling',
+                  Text(
+                    book.volumeInfo?.authors?[0] ?? 'unknown',
                     style: Styles.textStyle14,
                   ),
                   const SizedBox(
@@ -50,14 +60,16 @@ class BestsillerListViewItem extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        '19.99 €',
+                        'free',
                         style: Styles.textStyle20
                             .copyWith(fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(
                         width: 57,
                       ),
-                      const RatingWidget(),
+                      /*  RatingWidget(
+                        book: book,
+                      ), */
                     ],
                   ),
                 ],

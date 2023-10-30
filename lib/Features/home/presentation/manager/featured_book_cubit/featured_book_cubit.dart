@@ -13,7 +13,7 @@ class FeaturedBookCubit extends Cubit<FeaturedBookState> {
     emit(FeaturedBookLoading());
     var result = await homeRepo.fetchFeaturedBooks();
     result.fold(
-        (failure) => FeaturedBookFailure(errMessage: failure.errMessage),
+        (failure) =>emit( FeaturedBookFailure(errMessage: failure.errMessage)),
         (books) => emit(FeaturedBookSuccess(books: books)));
   }
 }
