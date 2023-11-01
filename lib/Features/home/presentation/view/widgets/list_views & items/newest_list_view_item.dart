@@ -1,6 +1,6 @@
 import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/Features/home/presentation/view/book_detailed_view.dart';
-import 'package:bookly_app/Features/home/presentation/view/widgets/list_view%20&%20items/book_poster.dart';
+import 'package:bookly_app/Features/home/presentation/view/widgets/list_views%20&%20items/book_poster.dart';
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -25,12 +25,10 @@ class NewestListViewItem extends StatelessWidget {
       child: Container(
         color: kPrimeColor,
         height: MediaQuery.of(context).size.height * .16,
+        width: MediaQuery.of(context).size.width * .5,
         child: Row(
           children: [
-            BookPoster(
-              book: book
-                
-            ),
+            BookPoster(book: book),
             const SizedBox(
               width: 30,
             ),
@@ -42,7 +40,7 @@ class NewestListViewItem extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * .5,
                     child: Text(
                       maxLines: 2,
-                      book.volumeInfo!.title ?? 'Computer science Book',
+                      book.volumeInfo?.title ?? 'Computer science Book',
                       style: Styles.textStyle18,
                     ),
                   ),

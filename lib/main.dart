@@ -1,4 +1,5 @@
 import 'package:bookly_app/Features/Splash/presentation/views/splach_view.dart';
+import 'package:bookly_app/Features/home/data/entites/book_entity.dart';
 import 'package:bookly_app/Features/home/data/models/repos/home_repo_imp.dart';
 import 'package:bookly_app/Features/home/presentation/manager/also_like_cubit/also_like_cubit.dart';
 import 'package:bookly_app/Features/home/presentation/manager/featured_book_cubit/featured_book_cubit.dart';
@@ -9,8 +10,14 @@ import 'package:bookly_app/core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive_flutter/adapters.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+  Hive.registerAdapter(BookEntityAdapter());
+
+  var box = await Hive.openBox(kBookBox);
+
   setupServiceLocator();
   runApp(const BooklyApp());
 }

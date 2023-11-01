@@ -8,6 +8,7 @@ class BookPoster extends StatelessWidget {
   const BookPoster({super.key, required this.book});
 
   final BookModel book;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -24,14 +25,16 @@ class BookPoster extends StatelessWidget {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(16),
           child: Padding(
-              padding: const EdgeInsets.only(right: 8.0),
-              child: CachedNetworkImage(
-                fit: BoxFit.fill,
-                imageUrl: book.volumeInfo!.imageLinks?.thumbnail??'',
-                errorWidget: (context, url, error) =>
-                    const Icon(Icons.error_outline_rounded),
-                placeholder: (context, url) => const CustomLoadingIndicator(),
-              )),
+            padding: const EdgeInsets.only(right: 8.0),
+            child: CachedNetworkImage(
+              fit: BoxFit.fill,
+              imageUrl: book.volumeInfo!.imageLinks?.thumbnail ??
+                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNJyI2UNuYTKFoUClfSD5P0qV8MJtB6gIqsA&usqp=CAU',
+              errorWidget: (context, url, error) =>
+                  const Icon(Icons.error_outline_rounded),
+              placeholder: (context, url) => const CustomLoadingIndicator(),
+            ),
+          ),
         ),
       ),
     );

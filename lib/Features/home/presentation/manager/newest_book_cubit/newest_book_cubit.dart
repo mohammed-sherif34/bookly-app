@@ -8,7 +8,7 @@ part 'newest_book_state.dart';
 class NewestBookCubit extends Cubit<NewestBookState> {
   NewestBookCubit(this.homeRepo) : super(NewestBookInitial());
   HomeRepo homeRepo;
-    BookModel book=BookModel();
+    BookModel book=const BookModel();
   Future<void> fetchNewestBooks() async {
     emit(NewestBookLoading());
     var result = await homeRepo.fetchNewestBooks();

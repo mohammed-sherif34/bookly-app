@@ -1,5 +1,5 @@
 import 'package:bookly_app/Features/home/presentation/manager/newest_book_cubit/newest_book_cubit.dart';
-import 'package:bookly_app/Features/home/presentation/view/widgets/list_view%20&%20items/newest_list_view_item.dart';
+import 'package:bookly_app/Features/home/presentation/view/widgets/list_views%20&%20items/newest_list_view_item.dart';
 import 'package:bookly_app/core/widgets/custom_loading_indicator.dart';
 import 'package:bookly_app/core/widgets/err_widget.dart';
 import 'package:flutter/material.dart';

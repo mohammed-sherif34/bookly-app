@@ -32,7 +32,7 @@ class ButtonSection extends StatelessWidget {
                 bottomRight: Radius.circular(16),
               ),
             ),
-            backgroundColor: Color(0xffEF8262),
+            backgroundColor: const Color(0xffEF8262),
             buttonTitle: 'Free preview',
             textColor: Colors.white,
             url: book.volumeInfo!.previewLink??'',

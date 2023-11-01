@@ -8,6 +8,7 @@ class ErrWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       errMessage,
+      maxLines: 2,
       style: Styles.textStyle18,
     );
   }
