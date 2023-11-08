@@ -7,7 +7,7 @@ abstract class Styles {
       fontWeight: FontWeight.w600);
   static const textStyle20 = TextStyle(
     fontSize: 20,
-    //fontFamily:GoogleFonts.gt,
+//fontFamily:GtSectraFine,
   );
   static const textStyle30 = TextStyle(
     overflow: TextOverflow.ellipsis,

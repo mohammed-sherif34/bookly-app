@@ -40,7 +40,6 @@ class NewestSliverLestView extends StatelessWidget {
   }
 }
 
-
 /* class BestSellerLestView extends StatelessWidget {
   const BestSellerLestView({super.key});
 

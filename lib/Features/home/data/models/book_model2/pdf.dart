@@ -1,7 +1,7 @@
 class Pdf {
-  final bool? isAvailable;
+  bool? isAvailable;
 
-  const Pdf({this.isAvailable});
+  Pdf({this.isAvailable});
 
   factory Pdf.fromJson(Map<String, dynamic> json) => Pdf(
         isAvailable: json['isAvailable'] as bool?,

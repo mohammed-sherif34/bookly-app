@@ -1,19 +1,19 @@
-import 'epub_model.dart';
-import 'pdf_model.dart';
+import 'epub.dart';
+import 'pdf.dart';
 
 class AccessInfo {
-  final String? country;
-  final String? viewability;
-  final bool? embeddable;
-  final bool? publicDomain;
-  final String? textToSpeechPermission;
-  final Epub? epub;
-  final Pdf? pdf;
-  final String? webReaderLink;
-  final String? accessViewStatus;
-  final bool? quoteSharingAllowed;
+  String? country;
+  String? viewability;
+  bool? embeddable;
+  bool? publicDomain;
+  String? textToSpeechPermission;
+  Epub? epub;
+  Pdf? pdf;
+  String? webReaderLink;
+  String? accessViewStatus;
+  bool? quoteSharingAllowed;
 
-  const AccessInfo({
+  AccessInfo({
     this.country,
     this.viewability,
     this.embeddable,

@@ -9,7 +9,6 @@ class AlsoLikeCubit extends Cubit<AlsoLikeState> {
   AlsoLikeCubit(this.homeRepo) : super(AlsoLikeInitial());
   HomeRepo homeRepo;
 
-
   Future<void> fetchAlsoLikeBook({required category}) async {
     emit(AlsoLikeLoading());
     var result = await homeRepo.fetchAlsoLikeBooks(category: category);

@@ -1,4 +1,3 @@
-
 import 'package:bookly_app/Features/search/presentation/view/widgets/custom_text_filed.dart';
 import 'package:bookly_app/Features/search/presentation/view/widgets/search_list_view.dart';
 import 'package:bookly_app/core/utils/styles.dart';
@@ -33,4 +32,3 @@ class SearchViewBody extends StatelessWidget {
     );
   }
 }
-

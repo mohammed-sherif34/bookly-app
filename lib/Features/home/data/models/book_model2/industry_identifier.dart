@@ -1,8 +1,8 @@
 class IndustryIdentifier {
-  final String? type;
-  final String? identifier;
+  String? type;
+  String? identifier;
 
-  const IndustryIdentifier({this.type, this.identifier});
+  IndustryIdentifier({this.type, this.identifier});
 
   factory IndustryIdentifier.fromJson(Map<String, dynamic> json) {
     return IndustryIdentifier(

@@ -1,9 +1,9 @@
-class Pdf {
-  final bool? isAvailable;
+class Epub {
+  bool? isAvailable;
 
-  const Pdf({this.isAvailable});
+  Epub({this.isAvailable});
 
-  factory Pdf.fromJson(Map<String, dynamic> json) => Pdf(
+  factory Epub.fromJson(Map<String, dynamic> json) => Epub(
         isAvailable: json['isAvailable'] as bool?,
       );
 

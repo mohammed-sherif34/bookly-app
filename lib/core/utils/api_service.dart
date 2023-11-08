@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 
 class ApiService {
- final Dio dio;
+  final Dio dio;
   static const String paseurl = 'https://www.googleapis.com/books/v1';
 
   ApiService({required this.dio});
@@ -11,4 +11,3 @@ class ApiService {
     return response.data;
   }
 }
-

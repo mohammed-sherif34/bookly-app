@@ -10,7 +10,8 @@ class CustomTextButton extends StatelessWidget {
       required this.shape,
       required this.backgroundColor,
       required this.buttonTitle,
-      required this.textColor, required this.url});
+      required this.textColor,
+      required this.url});
   final OutlinedBorder shape;
   final Color backgroundColor;
   final String buttonTitle;

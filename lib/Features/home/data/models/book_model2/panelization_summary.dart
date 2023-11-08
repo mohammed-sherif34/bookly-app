@@ -1,8 +1,8 @@
 class PanelizationSummary {
-  final bool? containsEpubBubbles;
-  final bool? containsImageBubbles;
+  bool? containsEpubBubbles;
+  bool? containsImageBubbles;
 
-  const PanelizationSummary({
+  PanelizationSummary({
     this.containsEpubBubbles,
     this.containsImageBubbles,
   });

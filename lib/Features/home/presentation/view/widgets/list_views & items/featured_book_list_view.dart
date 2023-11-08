@@ -22,8 +22,7 @@ class FeaturedBookListView extends StatelessWidget {
               itemCount: state.books.length,
               itemBuilder: (context, index) {
                 return BookPoster(
-                  book: state
-                      .books[index],
+                  book: state.books[index],
                 );
               },
             ),
@@ -37,6 +36,3 @@ class FeaturedBookListView extends StatelessWidget {
     );
   }
 }
-
-
-

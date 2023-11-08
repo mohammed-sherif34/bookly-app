@@ -4,12 +4,13 @@ import 'package:flutter/material.dart';
 
 class ButtonSection extends StatelessWidget {
   const ButtonSection({
-    super.key, required this.book,
+    super.key,
+    required this.book,
   });
   final BookModel book;
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       children: [
         Expanded(
             child: CustomTextButton(
@@ -22,7 +23,7 @@ class ButtonSection extends StatelessWidget {
           backgroundColor: Colors.white,
           buttonTitle: 'free',
           textColor: Colors.black,
-          url: book.volumeInfo!.previewLink??'',
+          url: book.volumeInfo!.previewLink ?? '',
         )),
         Expanded(
           child: CustomTextButton(
@@ -35,7 +36,7 @@ class ButtonSection extends StatelessWidget {
             backgroundColor: const Color(0xffEF8262),
             buttonTitle: 'Free preview',
             textColor: Colors.white,
-            url: book.volumeInfo!.previewLink??'',
+            url: book.volumeInfo!.previewLink ?? '',
           ),
         ),
       ],
